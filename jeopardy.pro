@@ -9,16 +9,38 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    addcategorydialog.cpp \
+    board.cpp \
+    category.cpp \
+    categorymanager.cpp \
+    editcategorydialog.cpp \
     main.cpp \
-    controlwindow.cpp
+    controlwindow.cpp \
+    question.cpp \
+    questionseditdialog.cpp \
+    removecategorydialog.cpp
 
 HEADERS += \
-    controlwindow.h
+    addcategorydialog.h \
+    board.h \
+    category.h \
+    categorymanager.h \
+    controlwindow.h \
+    editcategorydialog.h \
+    question.h \
+    questionseditdialog.h \
+    removecategorydialog.h
 
 FORMS += \
-    controlwindow.ui
+    addcategorydialog.ui \
+    controlwindow.ui \
+    editcategorydialog.ui \
+    questionseditdialog.ui \
+    removecategorydialog.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RESOURCES +=
